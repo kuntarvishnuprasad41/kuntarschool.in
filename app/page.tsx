@@ -1,28 +1,31 @@
+"use client";
+import React, { Suspense, useEffect, useState } from "react";
+import LoadingPage from "./LoadingPage";
+import { useTheme } from "next-themes";
+
 import Image from "next/image";
+import { Moon, Pencil, Sun } from "lucide-react";
+
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
+import { Button } from "@/components/ui/button";
+import HomePage from "./HomePage";
 
 export default function Home() {
-  return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <p className="text-[50px] font-semibold text-center">Coming Soon...</p>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Built using next.js →
-        </a>
-      </footer>
-    </div>
-  );
+  const { setTheme } = useTheme();
+  const [content, setContent] = useState(<LoadingPage />);
+
+  useEffect(() => {
+    setTimeout(() => {
+      if (typeof window !== "undefined") {
+        setContent(<HomePage />);
+      }
+    }, 500);
+  }, []);
+
+  return <>{content}</>;
 }
