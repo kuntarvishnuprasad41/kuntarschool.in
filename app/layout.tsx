@@ -3,6 +3,9 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
+import Header from "./Home/Header";
+import Footer from "./Home/Footer";
+import { SparklesCore } from "@/components/ui/sparkles";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -25,7 +28,19 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          {children}
+          <Header />
+          <SparklesCore
+            id="tsparticlesfullpage"
+            background="transparent"
+            minSize={1.4}
+            maxSize={6.4}
+            particleDensity={5}
+            className="w-full h-screen"
+            particleColor="#19C1B6"
+          >
+            {children}
+          </SparklesCore>
+          <Footer />
         </ThemeProvider>
       </body>
     </html>
