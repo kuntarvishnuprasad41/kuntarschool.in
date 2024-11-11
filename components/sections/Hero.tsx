@@ -1,6 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
-import React, { useState } from "react";
-import { motion } from "framer-motion";
+import React from "react";
+
 import {
   Carousel,
   CarouselContent,
@@ -10,7 +10,7 @@ import {
 } from "@/components/ui/carousel";
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import Link from "next/link";
-import AnimatedText from "../animations/AnimatedText";
+ 
 import { SparklesCore } from "../../components/ui/sparkles";
 
 function Hero() {
