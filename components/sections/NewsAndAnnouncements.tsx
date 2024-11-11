@@ -1,15 +1,8 @@
 /* eslint-disable @next/next/no-img-element */
 import React from "react";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselPrevious,
-  CarouselNext,
-} from "@/components/ui/carousel";
+ 
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
-import Link from "next/link";
-import { AwardIcon, MedalIcon, TrophyIcon } from "lucide-react";
+ 
 
 function NewsAndAnnouncements() {
   return (

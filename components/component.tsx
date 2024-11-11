@@ -371,7 +371,7 @@ export function Component() {
   );
 }
 
-function AwardIcon(props: any) {
+function AwardIcon(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg
       {...props}
@@ -391,7 +391,7 @@ function AwardIcon(props: any) {
   );
 }
 
-function MedalIcon(props: any) {
+function MedalIcon(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg
       {...props}
@@ -415,7 +415,7 @@ function MedalIcon(props: any) {
   );
 }
 
-function SchoolIcon(props: any) {
+function SchoolIcon(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg
       {...props}
@@ -439,7 +439,7 @@ function SchoolIcon(props: any) {
   );
 }
 
-function TrophyIcon(props: any) {
+function TrophyIcon(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg
       {...props}

@@ -21,4 +21,8 @@ export const SITE_DATA = {
       url: "blog",
     },
   ],
+  cta: {
+    title: "Call Now",
+    number: "+919447490883",
+  },
 };

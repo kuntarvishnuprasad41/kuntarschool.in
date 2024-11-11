@@ -6,9 +6,9 @@ import {
   CarouselPrevious,
   CarouselNext,
 } from "@/components/ui/carousel";
-import { Card, CardContent, CardFooter } from "@/components/ui/card";
-import Link from "next/link";
-import { AwardIcon, MedalIcon, TrophyIcon } from "lucide-react";
+import { Card, CardContent } from "@/components/ui/card";
+
+import { TrophyIcon } from "lucide-react";
 
 function Achievements() {
   return (

@@ -4,8 +4,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import Header from "./Home/Header";
-import Footer from "./Home/Footer";
-import { SparklesCore } from "@/components/ui/sparkles";
+import Footer from "./Home/Footer"; 
  
 import { LoaderProvider } from "./contexts/LoaderContext";
 

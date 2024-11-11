@@ -51,8 +51,15 @@ function Header() {
       <div className="hidden lg:flex items-center">
         <Themes />
       </div>
+
+      <Actions title={SITE_DATA.cta.title} number={SITE_DATA.cta.number} />
     </header>
   );
 }
 
 export default Header;
+
+export const Actions = (cta: { number: string; title: string }) => {
+  return <a href={`tel:${cta.number}`}>{cta.title}</a>;
+};
+
