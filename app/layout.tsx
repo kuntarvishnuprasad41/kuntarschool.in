@@ -6,8 +6,7 @@ import { ThemeProvider } from "@/components/theme-provider";
 import Header from "./Home/Header";
 import Footer from "./Home/Footer";
 import { SparklesCore } from "@/components/ui/sparkles";
-import { Pencil } from "lucide-react";
-import LoadingPage from "./LoadingPage";
+ 
 import { LoaderProvider } from "./contexts/LoaderContext";
 
 const inter = Inter({ subsets: ["latin"] });

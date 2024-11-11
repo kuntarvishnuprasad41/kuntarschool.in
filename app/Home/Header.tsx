@@ -5,7 +5,7 @@ import React from "react";
 
 function Header() {
   return (
-    <header className="w-full h-[100px] flex justify-between items-center fixed bg-white px-4">
+    <header className="w-full h-[100px] flex justify-between items-center fixed bg-white dark:bg-[#040718] px-4">
       <div className="relative h-full aspect-[2/1]">
         <Image
           src={"/logo.svg"}
