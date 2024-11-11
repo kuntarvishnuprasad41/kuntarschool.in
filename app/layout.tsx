@@ -8,6 +8,7 @@ import Footer from "./Home/Footer";
 import { SparklesCore } from "@/components/ui/sparkles";
 import { Pencil } from "lucide-react";
 import LoadingPage from "./LoadingPage";
+import { LoaderProvider } from "./contexts/LoaderContext";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -30,20 +31,22 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <Header />
-          <LoadingPage />
-          <SparklesCore
-            id="tsparticlesfullpage"
-            background="transparent"
-            minSize={1.4}
-            maxSize={6.4}
-            particleDensity={5}
-            className="w-full h-screen"
-            particleColor="#19C1B6"
-          >
-            {children}
-          </SparklesCore>
-          <Footer />
+          <LoaderProvider>
+            <Header />
+
+            <SparklesCore
+              id="tsparticlesfullpage"
+              background="transparent"
+              minSize={1.4}
+              maxSize={6.4}
+              particleDensity={5}
+              className="w-full h-screen"
+              particleColor="#19C1B6"
+            >
+              {children}
+            </SparklesCore>
+            <Footer />
+          </LoaderProvider>
         </ThemeProvider>
       </body>
     </html>
