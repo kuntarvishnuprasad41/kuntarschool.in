@@ -1,31 +1,36 @@
+// app/page.tsx
 "use client";
-import React, { Suspense, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import LoadingPage from "./LoadingPage";
-import { useTheme } from "next-themes";
-
-import Image from "next/image";
-import { Moon, Pencil, Sun } from "lucide-react";
-
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
-import { Button } from "@/components/ui/button";
 import HomePage from "./HomePage";
 
 export default function Home() {
-  const { setTheme } = useTheme();
-  const [content, setContent] = useState(<LoadingPage />);
+  const [mounted, setMounted] = useState(false);
+  const minimumLoadTime = 500; // milliseconds
 
   useEffect(() => {
-    setTimeout(() => {
-      if (typeof window !== "undefined") {
-        setContent(<HomePage />);
+    const startTime = Date.now();
+
+    const mount = async () => {
+      // Calculate remaining time to meet minimum load time
+      const elapsedTime = Date.now() - startTime;
+      const remainingTime = Math.max(0, minimumLoadTime - elapsedTime);
+
+      // Wait for remaining time if needed
+      if (remainingTime > 0) {
+        await new Promise((resolve) => setTimeout(resolve, remainingTime));
       }
-    }, 500);
+
+      setMounted(true);
+    };
+
+    mount();
   }, []);
 
-  return <>{content}</>;
+  // Handle loading state
+  if (!mounted) {
+    return <LoadingPage />;
+  }
+
+  return <HomePage />;
 }
