@@ -1,4 +1,3 @@
-// app/page.tsx
 "use client";
 import { useEffect, useState } from "react";
 import LoadingPage from "./LoadingPage";
@@ -32,5 +31,11 @@ export default function Home() {
     return <LoadingPage />;
   }
 
-  return <HomePage />;
+  return (
+    <>
+      <div className="z-100">
+        <HomePage />
+      </div>
+    </>
+  );
 }

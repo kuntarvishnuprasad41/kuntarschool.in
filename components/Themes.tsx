@@ -2,9 +2,7 @@
 import { useTheme } from "next-themes";
 
 import React from "react";
-import Pencil from "@/components/loaders/Pencil";
-
-import Image from "next/image";
+ 
 import { Moon, Sun } from "lucide-react";
 
 import {

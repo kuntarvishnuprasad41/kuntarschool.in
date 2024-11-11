@@ -33,17 +33,8 @@ export default function RootLayout({
           <LoaderProvider>
             <Header />
 
-            <SparklesCore
-              id="tsparticlesfullpage"
-              background="transparent"
-              minSize={1.4}
-              maxSize={6.4}
-              particleDensity={5}
-              className="w-full h-screen"
-              particleColor="#19C1B6"
-            >
-              {children}
-            </SparklesCore>
+            {children}
+
             <Footer />
           </LoaderProvider>
         </ThemeProvider>

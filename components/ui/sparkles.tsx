@@ -53,18 +53,20 @@ export const SparklesCore = (props: ParticlesProps) => {
   };
 
   return (
-    <motion.div animate={controls} className={cn("opacity-0", className)}>
+    <motion.div
+      animate={controls}
+      className={cn("opacity-0", className)}
+      style={{
+        background: `linear-gradient(224deg, #EDF0FC 0%, #FEF6EC 100%)`,
+      }}
+    >
       {init && (
         <Particles
           id={id || "tsparticles"}
           className={cn("h-full w-full")}
           particlesLoaded={particlesLoaded}
           options={{
-            background: {
-              color: {
-                value: background || "#0d47a1",
-              },
-            },
+            background: { color: { value: background || "transparent" } },
             fullScreen: {
               enable: false,
               zIndex: 1,
