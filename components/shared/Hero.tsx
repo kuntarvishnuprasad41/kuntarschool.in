@@ -14,7 +14,7 @@ function Hero() {
         particleColor="#19C1B6"
       />
       <div className="absolute mt-20 z-10 flex items-center justify-center h-[400px] w-screen text-black">
-        Hello
+        Something Cool is coming soon, Stay tuned!
       </div>
     </div>
   );
