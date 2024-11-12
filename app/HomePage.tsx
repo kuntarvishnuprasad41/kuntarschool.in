@@ -5,8 +5,9 @@
  */
 
 import Hero from "@/components/shared/Hero";
-import { SparklesCore } from "@/components/ui/sparkles";
 import HomeContainer from "./containers/Home";
+import { SparklesCore } from "@/components/ui/sparkles";
+import Image from "next/image";
 
 export default function HomePage() {
   return (
@@ -16,13 +17,29 @@ export default function HomePage() {
         background="transparent"
         minSize={1.4}
         maxSize={6.4}
-        particleDensity={15}
-        className="absolute inset-0 h-[683px] w-full z-0"
+        particleDensity={3}
+        className="relative inset-0 h-[683px] w-full z-0"
         particleColor="#19C1B6"
       />
+
+      <HomeDevider />
+
       <HomeContainer>
         <Hero />
+        <div className="relative ">xyz</div>
       </HomeContainer>
     </div>
   );
 }
+
+const HomeDevider = () => {
+  return (
+    <Image
+      src="/curved-border.svg"
+      height={200}
+      width={200}
+      alt="hgello"
+      className="relative -mt-[543px] w-screen mb-[10px]"
+    />
+  );
+};

@@ -61,8 +61,8 @@ export const SparklesCore = (props: ParticlesProps) => {
       // style={{ background: `linear-gradient(45deg, #EDF0FC 0%, #FEF6EC 100%)` }}
       style={
         theme === "dark"
-          ? { background: `linear-gradient(45deg, #778da9 10%, #415a77 100%)` }
-          : { background: `linear-gradient(45deg, #EDF0FC 0%, #FEF6EC 100%)` }
+          ? { background: `linear-gradient(45deg, #19C1B6 1%, #415a77 25%)` }
+          : { background: `linear-gradient(250deg, #D1F2F0 40%, #FEF8EC 70%)` }
       }
     >
       {init && (
