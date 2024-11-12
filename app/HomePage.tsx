@@ -5,7 +5,7 @@
  */
 
 import Hero from "@/components/shared/Hero";
-import HomeContainer from "./containers/Home";
+import HomeContainer from "./containers/HomeContainer";
 import { SparklesCore } from "@/components/ui/sparkles";
 import Image from "next/image";
 

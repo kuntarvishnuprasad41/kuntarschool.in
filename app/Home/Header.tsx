@@ -71,6 +71,10 @@ function Header() {
 export default Header;
 
 export const Actions = (cta: { number: string; title: string }) => {
-  return <a href={`tel:${cta.number}`}>{cta.title}</a>;
+  return (
+    <a href={`tel:${cta.number}`} className="">
+      {cta.title}
+    </a>
+  );
 };
 
