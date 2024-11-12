@@ -26,7 +26,7 @@ function Header() {
         <div className="hidden lg:flex justify-between w-[500px]">
           {SITE_DATA.menu.map((menu, idx) => {
             return (
-              <a href={menu.url} key={idx} className="">
+              <a href={menu.url} key={idx} className="font-medium">
                 {menu.title}
               </a>
             );

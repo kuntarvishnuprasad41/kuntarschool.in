@@ -1,14 +1,17 @@
 // layout.tsx
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Fredoka } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import Header from "./Home/Header";
-import Footer from "./Home/Footer"; 
- 
+import Footer from "./Home/Footer";
+
 import { LoaderProvider } from "./contexts/LoaderContext";
 
-const inter = Inter({ subsets: ["latin"] });
+const fredoka = Fredoka({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"], // Specify weights you need
+});
 
 export const metadata: Metadata = {
   title: "Kuntar School",
@@ -22,7 +25,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={inter.className} suppressHydrationWarning>
+      <body className={fredoka.className} suppressHydrationWarning>
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"
