@@ -30,6 +30,7 @@ export type Programs = {
 };
 
 export type Program = {
+  color: string;
   title: string;
   subtitle: string;
   image: string;

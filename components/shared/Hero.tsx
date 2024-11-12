@@ -45,7 +45,7 @@ export const Hero: React.FC<HeaderProps> = ({ SITE_DATA }) => {
             alt="Clipped Image"
             width={400} // Add appropriate width
             height={300} // Add appropriate height
-            className="object-cover h-[299px]" // Your existing class for styling
+            className="object-cover h-[299px] floating-image-container" // Your existing class for styling
             style={{
               clipPath:
                 "path('M195.99 59.7475C139.66 33.9834 83.896 -30.6363 37.6313 17.1651C-14.6902 71.224 -6.79595 167.235 29.8017 229.283C63.033 285.624 132.83 303.278 195.99 285.651C258.645 268.166 312.624 217.288 314.751 149.545C316.552 92.2095 244.557 81.9605 195.99 59.7475Z')",
