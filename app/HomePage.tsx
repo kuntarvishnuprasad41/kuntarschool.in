@@ -19,7 +19,7 @@ export const HomePage: React.FC<HeaderProps> = ({ SITE_DATA }) => {
         minSize={1.4}
         maxSize={6.4}
         particleDensity={3}
-        className="relative inset-0 h-[550px] w-full z-0"
+        className="relative inset-0 lg:h-[550px] h-[700px] w-full z-0"
         particleColor="#19C1B6"
       />
 
@@ -42,7 +42,7 @@ const HomeDevider = () => {
       height={200}
       width={200}
       alt="hgello"
-      className="relative -mt-[405px] w-screen -mb-[60px]"
+      className="relative lg:-mt-[405px] -mt-[600px]  w-screen -mb-[60px]"
     />
   );
 };

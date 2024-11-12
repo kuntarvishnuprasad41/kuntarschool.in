@@ -13,7 +13,7 @@ export default async function Home({
 
   return (
     <>
-      <div className="z-100">
+      <div className="z-100 overflow-hidden">
         <Header SITE_DATA={t} />
         {/* {JSON.stringify(t)} */}
         <HomePage SITE_DATA={t} />
