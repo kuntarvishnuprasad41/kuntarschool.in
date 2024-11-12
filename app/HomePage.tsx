@@ -32,6 +32,7 @@ export const HomePage: React.FC<HeaderProps> = ({ SITE_DATA }) => {
         <Hero SITE_DATA={SITE_DATA} />
         <EqualSpacing />
         <Programs SITE_DATA={SITE_DATA} />
+
         <div className="relative ">xyz</div>
       </HomeContainer>
     </div>
