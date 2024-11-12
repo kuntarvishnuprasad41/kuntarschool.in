@@ -1,10 +1,8 @@
-import { Actions } from "@/app/Home/Header";
+import { Actions, HeaderProps } from "@/app/Home/Header";
+
 import React from "react";
 
-function Hero({ data }: any) {
-  console.log(data, "d");
-
-  const SITE_DATA = data;
+export const Hero: React.FC<HeaderProps> = ({ SITE_DATA }) => {
   return (
     <div>
       <div className="relative    z-1  w-full      flex justify-between mt-24   ">
@@ -40,6 +38,6 @@ function Hero({ data }: any) {
       </div>
     </div>
   );
-}
+};
 
 export default Hero;

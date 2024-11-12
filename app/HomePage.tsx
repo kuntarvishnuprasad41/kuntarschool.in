@@ -8,8 +8,9 @@ import Hero from "@/components/shared/Hero";
 import HomeContainer from "./containers/HomeContainer";
 import { SparklesCore } from "@/components/ui/sparkles";
 import Image from "next/image";
+import { HeaderProps } from "./Home/Header";
 
-export default function HomePage({ data }: any) {
+export const HomePage: React.FC<HeaderProps> = ({ SITE_DATA }) => {
   return (
     <div className="relative   ">
       <SparklesCore
@@ -27,12 +28,12 @@ export default function HomePage({ data }: any) {
       <HomeContainer>
         {/* {JSON.stringify(data)} */}
 
-        <Hero data={data} />
+        <Hero SITE_DATA={SITE_DATA} />
         <div className="relative ">xyz</div>
       </HomeContainer>
     </div>
   );
-}
+};
 
 const HomeDevider = () => {
   return (

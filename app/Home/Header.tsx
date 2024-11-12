@@ -4,11 +4,34 @@ import Themes from "@/components/Themes";
 import Image from "next/image";
 
 import React, { useState } from "react";
- 
+
 import { MenuButton } from "@/components/framer/MenuButton";
 import { useTheme } from "next-themes";
 
-function Header({ SITE_DATA }) {
+export type Sitedata = {
+  menu: Menu[];
+  call: { number: string };
+  cta: {
+    title: string;
+    number: string;
+  };
+  hero: {
+    subtext: string;
+    text: string;
+    context: string;
+  };
+};
+
+export type Menu = {
+  title: string;
+  url: string;
+};
+
+export type HeaderProps = {
+  SITE_DATA: Sitedata;
+};
+
+export const Header: React.FC<HeaderProps> = ({ SITE_DATA }) => {
   const { theme } = useTheme();
   const [isOpen, setOpen] = useState(false);
 
@@ -66,7 +89,7 @@ function Header({ SITE_DATA }) {
       {/* <Actions title={SITE_DATA.cta.title} number={SITE_DATA.cta.number} /> */}
     </header>
   );
-}
+};
 
 export default Header;
 
