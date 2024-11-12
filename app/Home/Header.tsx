@@ -6,12 +6,23 @@ import Image from "next/image";
 import React, { useState } from "react";
 import { SITE_DATA } from "../data/site-data";
 import { MenuButton } from "@/components/framer/MenuButton";
+import { useTheme } from "next-themes";
 
 function Header() {
+  const { theme } = useTheme();
   const [isOpen, setOpen] = useState(false);
 
   return (
-    <header className="w-full h-[100px] flex justify-between items-center fixed bg-white dark:bg-[#040718] px-4 z-10">
+    <header
+      className="w-full h-[100px] flex justify-between items-center fixed  dark:bg-[#040718] px-4 z-10"
+      style={
+        theme === "dark"
+          ? {
+              background: `linear-gradient(45deg, #19C1B6 0%, #FEFEFE 0%,  #415b77 1%)`,
+            }
+          : { background: `linear-gradient(250deg, #D1F2F0 40%, #FEF8EC 80%)` }
+      }
+    >
       <div className="relative h-full aspect-[2/1]">
         <Image
           src={"/logo.svg"}
