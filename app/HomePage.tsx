@@ -18,7 +18,7 @@ export default function HomePage() {
         minSize={1.4}
         maxSize={6.4}
         particleDensity={3}
-        className="relative inset-0 h-[683px] w-full z-0"
+        className="relative inset-0 h-[783px] w-full z-0"
         particleColor="#19C1B6"
       />
 
@@ -39,7 +39,7 @@ const HomeDevider = () => {
       height={200}
       width={200}
       alt="hgello"
-      className="relative -mt-[543px] w-screen mb-[10px]"
+      className="relative -mt-[643px] w-screen mb-[0px]"
     />
   );
 };

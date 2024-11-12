@@ -5,7 +5,7 @@ import React from "react";
 function Hero() {
   return (
     <div>
-      <div className="relative    z-1  h-[523px] w-full max-w-[1100px]  p-2 px-10  ">
+      <div className="relative    z-1  h-[523px] w-full max-w-[1100px]   px-10  ">
         <div className=" lg:w-2/3 flex-col justify-between  ">
           <div className="">
             <p className="lg:text-[22px] text-creamy_blue font-semibold mt-24 text-[20px]">
