@@ -2,6 +2,7 @@ import { HomePage } from "../HomePage";
 import { getDictionary } from "./dictionaries";
 import Header, { Sitedata } from "../Home/Header";
 
+
 export default async function Home({
   params: { lang },
 }: {
