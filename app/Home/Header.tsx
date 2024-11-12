@@ -4,11 +4,11 @@ import Themes from "@/components/Themes";
 import Image from "next/image";
 
 import React, { useState } from "react";
-import { SITE_DATA } from "../data/site-data";
+ 
 import { MenuButton } from "@/components/framer/MenuButton";
 import { useTheme } from "next-themes";
 
-function Header() {
+function Header({ SITE_DATA }) {
   const { theme } = useTheme();
   const [isOpen, setOpen] = useState(false);
 

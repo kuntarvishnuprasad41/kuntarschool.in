@@ -9,7 +9,7 @@ import HomeContainer from "./containers/HomeContainer";
 import { SparklesCore } from "@/components/ui/sparkles";
 import Image from "next/image";
 
-export default function HomePage() {
+export default function HomePage({ data }: any) {
   return (
     <div className="relative   ">
       <SparklesCore
@@ -25,7 +25,9 @@ export default function HomePage() {
       <HomeDevider />
 
       <HomeContainer>
-        <Hero />
+        {/* {JSON.stringify(data)} */}
+
+        <Hero data={data} />
         <div className="relative ">xyz</div>
       </HomeContainer>
     </div>

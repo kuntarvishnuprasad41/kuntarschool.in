@@ -30,12 +30,12 @@ export default function RootLayout({
       <body className={fredoka.className} suppressHydrationWarning>
         <ThemeProvider
           attribute="class"
-          defaultTheme="dark"
+          defaultTheme="light"
           enableSystem
           disableTransitionOnChange
         >
           <LoaderProvider>
-            <Header />
+            {/* <Header /> */}
 
             {children}
 

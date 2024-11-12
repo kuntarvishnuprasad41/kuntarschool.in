@@ -1,8 +1,10 @@
-import { SITE_DATA } from "@/app/data/site-data";
 import { Actions } from "@/app/Home/Header";
 import React from "react";
 
-function Hero() {
+function Hero({ data }: any) {
+  console.log(data, "d");
+
+  const SITE_DATA = data;
   return (
     <div>
       <div className="relative    z-1  w-full      flex justify-between mt-24   ">
