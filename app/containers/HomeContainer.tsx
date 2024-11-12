@@ -6,8 +6,10 @@ interface MyComponentProps {
 
 const HomeContainer: React.FC<MyComponentProps> = ({ children }) => {
   return (
-    <div className="w-screen flex justify-center content-center ">
-      <div className="  w-full max-w-8xl px-4 sm:px-6 ">{children}</div>
+    <div className="w-screen flex  items-center content-center justify-center  ">
+      <div className=" w-full px-4 sm:px-6 md:px-8 max-w-sm sm:max-w-xl md:max-w-4xl lg:max-w-6xl  ">
+        {children}
+      </div>
     </div>
   );
 };

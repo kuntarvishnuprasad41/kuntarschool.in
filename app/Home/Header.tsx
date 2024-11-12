@@ -18,7 +18,7 @@ function Header() {
       style={
         theme === "dark"
           ? {
-              background: `linear-gradient(45deg, #19C1B6 0%, #FEFEFE 0%,  #415b77 1%)`,
+              background: `#000`,
             }
           : { background: `linear-gradient(250deg, #D1F2F0 40%, #FEF8EC 80%)` }
       }
