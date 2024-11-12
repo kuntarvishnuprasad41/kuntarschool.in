@@ -74,3 +74,20 @@
       @apply bg-background text-foreground;
     }
   }
+
+
+    .wave-container {
+      display: flex;
+      width: 100%;
+      overflow: hidden;
+      background-color: #ffffff;
+    }
+
+    /* Each wave segment */
+    .wave {
+      position: relative;
+      width: 200px;
+      height: 23px;
+      background: #19C1B6;
+      clip-path: path("M0,23 C20,0 40,23 60,0 C80,23 100,0 120,23 C140,0 160,23 180,0 C200,23 220,0 240,23");
+    }

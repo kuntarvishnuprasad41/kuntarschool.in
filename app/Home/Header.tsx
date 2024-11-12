@@ -52,7 +52,7 @@ function Header() {
         <Themes />
       </div>
 
-      <Actions title={SITE_DATA.cta.title} number={SITE_DATA.cta.number} />
+      {/* <Actions title={SITE_DATA.cta.title} number={SITE_DATA.cta.number} /> */}
     </header>
   );
 }

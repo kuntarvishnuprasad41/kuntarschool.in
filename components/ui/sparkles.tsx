@@ -6,6 +6,7 @@ import type { Container, SingleOrMultiple } from "@tsparticles/engine";
 import { loadSlim } from "@tsparticles/slim";
 import { cn } from "@/utils/cn";
 import { motion, useAnimation } from "framer-motion";
+import { useTheme } from "next-themes";
 
 type ParticlesProps = {
   id?: string;
@@ -31,6 +32,7 @@ export const SparklesCore = (props: ParticlesProps) => {
     particleDensity,
   } = props;
   const [init, setInit] = useState(false);
+  const { theme } = useTheme();
   useEffect(() => {
     initParticlesEngine(async (engine) => {
       await loadSlim(engine);
@@ -56,9 +58,12 @@ export const SparklesCore = (props: ParticlesProps) => {
     <motion.div
       animate={controls}
       className={cn("opacity-0", className)}
-      style={{
-        background: `linear-gradient(224deg, #EDF0FC 0%, #FEF6EC 100%)`,
-      }}
+      // style={{ background: `linear-gradient(45deg, #EDF0FC 0%, #FEF6EC 100%)` }}
+      style={
+        theme === "dark"
+          ? { background: `linear-gradient(45deg, #778da9 10%, #415a77 100%)` }
+          : { background: `linear-gradient(45deg, #EDF0FC 0%, #FEF6EC 100%)` }
+      }
     >
       {init && (
         <Particles
