@@ -52,7 +52,7 @@ const CurlyDevider = () => {
 };
 
 export const EqualSpacing = () => {
-  return <div className="w-screen h-[60px] bg-white"></div>;
+  return <div className="w-screen h-[60px]  "></div>;
 };
 
 // const HomeDevider = () => {

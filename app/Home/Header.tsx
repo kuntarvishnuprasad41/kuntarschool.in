@@ -7,6 +7,9 @@ import React, { useState } from "react";
 
 import { MenuButton } from "@/components/framer/MenuButton";
 import { useTheme } from "next-themes";
+import { LanguageToggle } from "@/components/shared/LanguageSelector";
+import { Button } from "@/components/ui/button";
+import { Phone } from "lucide-react";
 
 export type Sitedata = {
   menu: Menu[];
@@ -102,8 +105,10 @@ export const Header: React.FC<HeaderProps> = ({ SITE_DATA }) => {
         </div>
       </div>
 
-      <div className="hidden lg:flex items-center">
+      <div className="hidden lg:flex items-center gap-2">
         <Themes />
+        <LanguageToggle />
+        <CallButton SITE_DATA={SITE_DATA} />
       </div>
 
       {/* <Actions title={SITE_DATA.cta.title} number={SITE_DATA.cta.number} /> */}
@@ -112,6 +117,20 @@ export const Header: React.FC<HeaderProps> = ({ SITE_DATA }) => {
 };
 
 export default Header;
+export type CallButton = {
+  SITE_DATA: Sitedata;
+};
+
+export const CallButton: React.FC<CallButton> = ({ SITE_DATA }) => {
+  return (
+    <Button
+      className="bg-white hover:bg-slate-100 h-[38px] w-[38px] p-0"
+      onClick={() => (window.location.href = `tel:${SITE_DATA.call.number}`)}
+    >
+      <Phone className="text-black h-[1.2rem] w-[1.2rem]  rotate-0  transition-all dark:-rotate-90  "></Phone>
+    </Button>
+  );
+};
 
 export const Actions = (cta: { number: string; title: string }) => {
   return (
