@@ -15,7 +15,7 @@ function Header() {
       <div className="relative h-full aspect-[2/1]">
         <Image
           src={"/logo.svg"}
-          alt={""}
+          alt={"A.U.P.S. KUNTAR"}
           width={400}
           height={400}
           className="-mt-8"

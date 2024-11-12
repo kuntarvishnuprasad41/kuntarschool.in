@@ -25,6 +25,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
       <body className={fredoka.className} suppressHydrationWarning>
         <ThemeProvider
           attribute="class"
