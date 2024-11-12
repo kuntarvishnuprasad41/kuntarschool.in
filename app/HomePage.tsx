@@ -9,6 +9,7 @@ import HomeContainer from "./containers/HomeContainer";
 import { SparklesCore } from "@/components/ui/sparkles";
 import Image from "next/image";
 import { HeaderProps } from "./Home/Header";
+import Programs from "@/components/shared/Programs";
 
 export const HomePage: React.FC<HeaderProps> = ({ SITE_DATA }) => {
   return (
@@ -23,19 +24,21 @@ export const HomePage: React.FC<HeaderProps> = ({ SITE_DATA }) => {
         particleColor="#19C1B6"
       />
 
-      <HomeDevider />
+      <CurlyDevider />
 
       <HomeContainer>
         {/* {JSON.stringify(data)} */}
 
         <Hero SITE_DATA={SITE_DATA} />
+        <EqualSpacing />
+        <Programs SITE_DATA={SITE_DATA} />
         <div className="relative ">xyz</div>
       </HomeContainer>
     </div>
   );
 };
 
-const HomeDevider = () => {
+const CurlyDevider = () => {
   return (
     <Image
       src="/curved-border.svg"
@@ -46,3 +49,11 @@ const HomeDevider = () => {
     />
   );
 };
+
+export const EqualSpacing = () => {
+  return <div className="w-screen h-[60px] bg-white"></div>;
+};
+
+// const HomeDevider = () => {
+//   return <div>hello</div>;
+// };

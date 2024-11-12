@@ -30,5 +30,29 @@
     "subtext": "Bringing the change that you never knew needed.",
     "text": "Coming Soon...",
     "context": "Bringing the change that you never knew needed."
+  },
+  "programs": {
+    "title": "Our Programs",
+    "description": "Programs we offer",
+    "programs": [
+      {
+        "title": "Sports",
+        "subtitle": "Sub description",
+        "image": "imageUrl",
+        "button": { "title": "buttontitle", "url": "buttonurl" }
+      },
+      {
+        "title": "Sports",
+        "subtitle": "Sub description",
+        "image": "imageUrl",
+        "button": { "title": "buttontitle", "url": "buttonurl" }
+      },
+      {
+        "title": "Sports",
+        "subtitle": "Sub description",
+        "image": "imageUrl",
+        "button": { "title": "buttontitle", "url": "buttonurl" }
+      }
+    ]
   }
 }

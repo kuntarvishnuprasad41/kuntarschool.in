@@ -20,6 +20,25 @@ export type Sitedata = {
     text: string;
     context: string;
   };
+  programs: Programs;
+};
+
+export type Programs = {
+  title: string;
+  description: string;
+  programs: Program[];
+};
+
+export type Program = {
+  title: string;
+  subtitle: string;
+  image: string;
+  button: ProgramButton;
+};
+
+export type ProgramButton = {
+  title: string;
+  url: string;
 };
 
 export type Menu = {
