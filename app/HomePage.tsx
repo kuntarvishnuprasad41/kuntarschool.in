@@ -3,13 +3,17 @@
  * @see https://v0.dev/t/sD0MFeiBVTx
  * Documentation: https://v0.dev/docs#integrating-generated-code-into-your-nextjs-app
  */
-
-import Hero from "@/components/shared/Hero";
+ 
 import HomeContainer from "./containers/HomeContainer";
-import { SparklesCore } from "@/components/ui/sparkles";
 import Image from "next/image";
 import { HeaderProps } from "./Home/Header";
-import Programs from "@/components/shared/Programs";
+import dynamic from "next/dynamic";
+const Hero = dynamic(() => import("@/components/shared/Hero"));
+const SparklesCore = dynamic(() => import("@/components/ui/sparkles"));
+const Programs = dynamic(() => import("@/components/shared/Programs"));
+
+
+
 
 export const HomePage: React.FC<HeaderProps> = ({ SITE_DATA }) => {
   return (
