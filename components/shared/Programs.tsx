@@ -136,6 +136,39 @@ export const ProgramSection: React.FC<ProgramData> = ({ SITE_DATA }) => {
             }
           )}
         </div>
+        <div className="justify-start mt-4">
+          {SITE_DATA.programs.programsDescriptive.keypoints.map((kp, idx) => {
+            return (
+              <div
+                className="flex justify-start gap-2 w-[450px] text-center items-center "
+                key={idx}
+              >
+                <div className="h-2 w-2 bg-teal-600 rounded-full "> </div>
+                <p>{kp}</p>
+              </div>
+            );
+          })}
+
+          <div className="flex gap-4">
+            <div className="mt-7  ">
+              <a
+                href={SITE_DATA.programs.programsDescriptive.button.url}
+                className="rounded-full bg-secondary_orange px-7 py-2 font-semibold"
+              >
+                {SITE_DATA.programs.programsDescriptive.button.title}
+              </a>
+            </div>
+
+            <div className="mt-7  ">
+              <a
+                href={SITE_DATA.programs.programsDescriptive.vidB.url}
+                className="rounded-full bg-secondary_orange px-7 py-2 font-semibold"
+              >
+                {SITE_DATA.programs.programsDescriptive.vidB.title}
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );

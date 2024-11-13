@@ -42,7 +42,7 @@ export type Programs = {
       title: string;
       url: string;
     };
-    "video-btn": {
+    vidB: {
       title: string;
       url: string;
     };

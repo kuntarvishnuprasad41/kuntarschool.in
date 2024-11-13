@@ -39,7 +39,7 @@ export const HomePage: React.FC<HeaderProps> = ({ SITE_DATA }) => {
       <div
         className="bg-secondary_orange_light"
         style={{
-          background: `linear-gradient(250deg, #D1F2F0 40%, #FEF8EC 70%)`,
+          background: `linear-gradient(50deg, #D1F2F0 40%, #FEF8EC 70%)`,
         }}
       >
         <HomeContainer>
