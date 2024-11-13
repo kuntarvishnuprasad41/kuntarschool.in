@@ -26,10 +26,27 @@ export type Sitedata = {
   programs: Programs;
 };
 
+export type ProgramContainer = { title: string; description: string };
+
 export type Programs = {
   title: string;
   description: string;
   programs: Program[];
+  programsDescriptive: {
+    image: string;
+    title: string;
+    description: string;
+    container: ProgramContainer[];
+    keypoints: string[];
+    button: {
+      title: string;
+      url: string;
+    };
+    "video-btn": {
+      title: string;
+      url: string;
+    };
+  };
 };
 
 export type Program = {

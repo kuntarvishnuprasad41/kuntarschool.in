@@ -25,41 +25,41 @@ const Programs: React.FC<ProgramData> = ({ SITE_DATA }) => {
         <EqualSpacing />
         <Programcarousel SITE_DATA={SITE_DATA} />
       </div>
-      <div>
-        <EqualSpacing />
-        <EqualSpacing />
-        <EqualSpacing />
-        <ProgramSection />
-
-        <EqualSpacing />
-      </div>
     </div>
   );
 };
 
 export default Programs;
 
-export const ProgramSection = () => {
+export const ProgramSection: React.FC<ProgramData> = ({ SITE_DATA }) => {
   return (
-    <div className="flex">
-      <div className="relative w-full max-w-xl">
+    <div className="flex flex-col lg:flex-row">
+      <div className="relative w-full max-w-xl    ">
         <Image
           src="/ppl.jpg"
           alt="Clipped Image"
-          width={400}
+          width={200}
           height={300}
           priority
           loading="eager"
-          className="object-cover h-[299px] w-full relative z-[1]"
+          className="object-cover h-[299px] w-full relative z-[1] hidden lg:block"
           style={{
             clipPath:
               "path('M195.99 59.7475C252.32 33.9834 308.084 -30.6363 354.349 17.1651C406.67 71.224 398.776 167.235 362.178 229.283C328.947 285.624 259.15 303.278 195.99 285.651C133.335 268.166 79.356 217.288 77.229 149.545C75.428 92.2095 147.423 81.9605 195.99 59.7475Z')",
           }}
         />
-
+        <Image
+          src="/ppl.jpg"
+          alt="Clipped Image"
+          width={200}
+          height={300}
+          priority
+          loading="eager"
+          className="object-cover h-[299px] w-full relative z-[1] lg:hidden block rounded-2xl"
+        />
         {/* Orange border overlay */}
         <div
-          className="absolute inset-0 z-0"
+          className="absolute inset-0 z-0 hidden lg:block"
           style={{
             background: "#FF9B50",
             clipPath:
@@ -67,10 +67,18 @@ export const ProgramSection = () => {
           }}
         />
 
+        <div
+          className="absolute inset-0 z-0 lg:hidden block"
+          style={{
+            background: "#FF9B50",
+            clipPath:
+              "path('M130.66 53.17C168.21 35.99 205.39 -12.09 236.23 14.78C271.11 50.82 265.85 114.82 241.45 156.19C219.29 193.75 172.77 205.52 130.66 193.77C88.89 182.11 52.90 148.19 51.49 103.03C50.29 64.81 98.28 57.97 130.66 43.17Z')",
+          }}
+        />
         {/* Teal accent lines */}
-        <div className="absolute bottom-[-20px] right-40 -rotate-12 ">
+        <div className="absolute lg:bottom-[-10px] bottom-[40px] right-20 -rotate-12  ">
           <div className="-rotate-6">
-            <div className="-rotate-3">
+            <div className="-rotate-6">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="118"
@@ -101,7 +109,34 @@ export const ProgramSection = () => {
           </div>
         </div>
       </div>
-      <div>asd</div>
+      <div className="flex justify-center flex-col items-center">
+        <h2 className="lg:text-[45px] text-[30px] font-semibold">
+          {SITE_DATA.programs.programsDescriptive.title}
+        </h2>
+        <p>{SITE_DATA.programs.programsDescriptive.description}</p>
+        <div className="bg-teal-500 mt-2 lg:h-[110px] h-[300px] lg:w-[85%] w-[250px] rounded-3xl flex flex-col  lg:flex-row justify-around sm:justify-between lg:justify-around p-0 lg:pl-4 items-center text-white">
+          {SITE_DATA.programs.programsDescriptive.container.map(
+            (content, idx) => {
+              return (
+                <div className="flex lg:flex-row flex-col gap-10">
+                  <div key={idx}>
+                    <h2 className="font-medium text-xl">{content.title}</h2>
+                    <p>{content.description}</p>
+                  </div>
+                  <div className="hidden lg:flex">
+                    {idx + 1 !=
+                    SITE_DATA.programs.programsDescriptive.container.length ? (
+                      <div className="h-[50px] bg-white w-[2px] rounded-full"></div>
+                    ) : (
+                      <></>
+                    )}
+                  </div>
+                </div>
+              );
+            }
+          )}
+        </div>
+      </div>
     </div>
   );
 };

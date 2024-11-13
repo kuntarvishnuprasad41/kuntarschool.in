@@ -11,12 +11,10 @@ import Image from "next/image";
 import { HeaderProps } from "./Home/Header";
 // import Programs from "@/components/shared/Programs";
 import dynamic from "next/dynamic";
+import { ProgramSection } from "@/components/shared/Programs";
 const Hero = dynamic(() => import("@/components/shared/Hero"));
- 
-const Programs = dynamic(()=>import("@/components/shared/Programs"))
 
-
-
+const Programs = dynamic(() => import("@/components/shared/Programs"));
 
 export const HomePage: React.FC<HeaderProps> = ({ SITE_DATA }) => {
   return (
@@ -35,8 +33,26 @@ export const HomePage: React.FC<HeaderProps> = ({ SITE_DATA }) => {
         <Hero SITE_DATA={SITE_DATA} />
         <EqualSpacing />
         <Programs SITE_DATA={SITE_DATA} />
-        <div className="relative z-10">xyz</div>
+        <EqualSpacing />
+        <EqualSpacing />
       </HomeContainer>
+      <div
+        className="bg-secondary_orange_light"
+        style={{
+          background: `linear-gradient(250deg, #D1F2F0 40%, #FEF8EC 70%)`,
+        }}
+      >
+        <HomeContainer>
+          <div>
+            <EqualSpacing />
+            <EqualSpacing />
+
+            <ProgramSection SITE_DATA={SITE_DATA} />
+            <EqualSpacing />
+            <EqualSpacing />
+          </div>
+        </HomeContainer>
+      </div>
     </div>
   );
 };
