@@ -6,7 +6,6 @@ export const Hero: React.FC<HeaderProps> = ({ SITE_DATA }) => {
   return (
     <div>
       <div className="relative z-1 w-full flex justify-between gap-2 mt-24 min-h-[300px]">
-        {" "}
         {/* Adjusted min-height */}
         <div className="flex-col sm:w-full justify-center items-center">
           <div>
@@ -46,7 +45,7 @@ export const Hero: React.FC<HeaderProps> = ({ SITE_DATA }) => {
             <Actions number={SITE_DATA.call.number} title="Call to know more" />
           </div>
         </div>
-        <div className="lg:w-[500px] mt-10 h-[300px] hidden md:block lg:block">
+        <div className="lg:w-[500px]  h-[300px] hidden md:block lg:block">
           <Image
             src="/ppl.jpg"
             alt="Clipped Image"

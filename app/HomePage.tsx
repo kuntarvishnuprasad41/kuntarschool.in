@@ -13,27 +13,22 @@ import Programs from "@/components/shared/Programs";
 
 export const HomePage: React.FC<HeaderProps> = ({ SITE_DATA }) => {
   return (
-    <div className="relative   ">
+    <div className="relative w-full overflow-hidden">
       <SparklesCore
         id="tsparticlesfullpage"
         background="transparent"
         minSize={1.4}
         maxSize={6.4}
         particleDensity={3}
-        className="relative inset-0 lg:h-[550px] h-[770px] w-full z-0"
+        className="absolute inset-0 lg:h-[550px] h-[770px] w-full z-0 "
         particleColor="#19C1B6"
       />
-
       <CurlyDevider />
-
       <HomeContainer>
-        {/* {JSON.stringify(data)} */}
-
         <Hero SITE_DATA={SITE_DATA} />
         <EqualSpacing />
         <Programs SITE_DATA={SITE_DATA} />
-
-        <div className="relative ">xyz</div>
+        <div className="relative z-10">xyz</div>
       </HomeContainer>
     </div>
   );
@@ -41,13 +36,16 @@ export const HomePage: React.FC<HeaderProps> = ({ SITE_DATA }) => {
 
 const CurlyDevider = () => {
   return (
-    <Image
-      src="/curved-border.svg"
-      height={200}
-      width={200}
-      alt="hgello"
-      className="relative lg:-mt-[385px] -mt-[620px]  w-screen -mb-[60px]"
-    />
+    <div className="relative w-screen z-1">
+      <Image
+        src="/curved-border.svg"
+        height={200}
+        width={200}
+        alt="Curved Divider"
+        className=" mt-32 w-full  "
+        priority
+      />
+    </div>
   );
 };
 
