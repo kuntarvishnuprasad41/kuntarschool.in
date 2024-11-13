@@ -46,13 +46,13 @@ const CurlyDevider = () => {
       height={200}
       width={200}
       alt="hgello"
-      className="relative lg:-mt-[405px] -mt-[600px]  w-screen -mb-[60px]"
+      className="relative lg:-mt-[385px] -mt-[600px]  w-screen -mb-[60px]"
     />
   );
 };
 
 export const EqualSpacing = () => {
-  return <div className="w-screen h-[60px]  "></div>;
+  return <div className="w-screen h-[20px]  "></div>;
 };
 
 // const HomeDevider = () => {

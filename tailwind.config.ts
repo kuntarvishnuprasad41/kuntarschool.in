@@ -56,9 +56,7 @@ export default {
           "5": "hsl(var(--chart-5))",
         },
       },
-      backgroundImage: {
-        linear_background: "linear-gradient(to right, #19C1B6, #FEA439)",
-      },
+
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
