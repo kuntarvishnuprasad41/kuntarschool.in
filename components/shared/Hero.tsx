@@ -5,15 +5,19 @@ import React from "react";
 export const Hero: React.FC<HeaderProps> = ({ SITE_DATA }) => {
   return (
     <div>
-      <div className="relative z-1 w-full flex justify-between gap-2 mt-24 min-h-[200px]">
+      <div className="relative z-1 w-full flex justify-between gap-2 mt-24 min-h-[300px]">
         {" "}
-        {/* Added min-height */}
+        {/* Adjusted min-height */}
         <div className="flex-col sm:w-full justify-center items-center">
           <div>
-            <p className="lg:text-[22px] text-creamy_blue font-semibold text-[20px]">
+            <p className="lg:text-[22px] text-creamy_blue font-semibold text-[20px] min-h-[30px]">
+              {" "}
+              {/* Set min-height for stability */}
               {SITE_DATA.hero.subtext}
             </p>
-            <p className="lg:text-[56px] text-[32px] text-black font-semibold">
+            <p className="lg:text-[56px] text-[32px] text-black font-semibold min-h-[70px]">
+              {" "}
+              {/* Set min-height for stability */}
               {SITE_DATA.hero.text}
             </p>
             <div className="lg:hidden md:hidden sm:block">
@@ -32,7 +36,9 @@ export const Hero: React.FC<HeaderProps> = ({ SITE_DATA }) => {
             </div>
           </div>
 
-          <p className="lg:text-[26px] text-[16px] text-black font-semibold">
+          <p className="lg:text-[26px] text-[16px] text-black font-semibold min-h-[30px]">
+            {" "}
+            {/* Set min-height */}
             {SITE_DATA.hero.context}
           </p>
 

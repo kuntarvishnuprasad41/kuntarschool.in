@@ -20,7 +20,7 @@ export const HomePage: React.FC<HeaderProps> = ({ SITE_DATA }) => {
         minSize={1.4}
         maxSize={6.4}
         particleDensity={3}
-        className="relative inset-0 lg:h-[550px] h-[700px] w-full z-0"
+        className="relative inset-0 lg:h-[550px] h-[770px] w-full z-0"
         particleColor="#19C1B6"
       />
 
@@ -46,7 +46,7 @@ const CurlyDevider = () => {
       height={200}
       width={200}
       alt="hgello"
-      className="relative lg:-mt-[385px] -mt-[600px]  w-screen -mb-[60px]"
+      className="relative lg:-mt-[385px] -mt-[620px]  w-screen -mb-[60px]"
     />
   );
 };
