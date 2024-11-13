@@ -76,6 +76,8 @@ export const Header: React.FC<HeaderProps> = ({ SITE_DATA }) => {
           width={400}
           height={400}
           className="-mt-8"
+          priority
+          loading="eager"
         />
       </div>
 
