@@ -7,7 +7,6 @@
 // import Hero from "@/components/shared/Hero";
 
 import { SparklesCore } from "@/components/ui/sparkles";
-import Image from "next/image";
 
 export const HomePage = () => {
   return (
