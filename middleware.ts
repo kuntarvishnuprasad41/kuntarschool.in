@@ -9,20 +9,23 @@ export function middleware(request: NextRequest) {
   // Check if there is any supported locale in the pathname
   const { pathname } = request.nextUrl;
 
-    if (pathname == "/soon") {
-      return;
-    }
-    if (
-      pathname.startsWith("/_next") ||
-      pathname.startsWith("/static") ||
-      pathname.startsWith("/public") ||
-      pathname.startsWith("/favicon.ico") ||
-      pathname.startsWith("soon") ||
-      pathname.match(/\.(png|jpg|jpeg|gif|svg|webp|ico|css|js)$/)
-    ) {
-      // Skip public assets and API paths
-      return NextResponse.next();
-    }
+  request.nextUrl.pathname = `/${pathname}`;
+  //  return NextResponse.redirect(request.nextUrl);
+
+  if (pathname == "/soon") {
+    return;
+  }
+  if (
+    pathname.startsWith("/_next") ||
+    pathname.startsWith("/static") ||
+    pathname.startsWith("/public") ||
+    pathname.startsWith("/favicon.ico") ||
+    pathname.startsWith("soon") ||
+    pathname.match(/\.(png|jpg|jpeg|gif|svg|webp|ico|css|js)$/)
+  ) {
+    // Skip public assets and API paths
+    return NextResponse.next();
+  }
   const pathnameHasLocale = locales.some(
     (locale) => pathname.startsWith(`/${locale}/`) || pathname === `/${locale}`
   );
@@ -32,6 +35,8 @@ export function middleware(request: NextRequest) {
   request.nextUrl.pathname = `/${locale}${pathname}`;
   // e.g. incoming request is /products
   // The new URL is now /en-US/products
+  // Comment to stop coming soon
+  request.nextUrl.pathname = `/soon`;
   return NextResponse.redirect(request.nextUrl);
 }
 export const config = {
