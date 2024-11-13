@@ -19,21 +19,6 @@ export const Hero: React.FC<HeaderProps> = ({ SITE_DATA }) => {
               {/* Set min-height for stability */}
               {SITE_DATA.hero.text}
             </p>
-            <div className="lg:hidden md:hidden sm:block">
-              <Image
-                src="/ppl.jpg"
-                alt="Clipped Image"
-                width={400}
-                height={300}
-                className="object-cover h-[299px]"
-                style={{
-                  clipPath:
-                    "path('M195.99 59.7475C139.66 33.9834 83.896 -30.6363 37.6313 17.1651C-14.6902 71.224 -6.79595 167.235 29.8017 229.283C63.033 285.624 132.83 303.278 195.99 285.651C258.645 268.166 312.624 217.288 314.751 149.545C316.552 92.2095 244.557 81.9605 195.99 59.7475Z')",
-                }}
-                priority
-                loading="eager"
-              />
-            </div>
           </div>
 
           <p className="lg:text-[26px] text-[16px] text-black font-semibold min-h-[30px]">
