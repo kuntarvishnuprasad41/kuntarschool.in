@@ -4,6 +4,8 @@ import { Fredoka } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider"; 
 import Footer from "./Home/Footer";
+import { SpeedInsights } from "@vercel/speed-insights/next";
+import { Analytics } from "@vercel/analytics/react";
 
 import { LoaderProvider } from "./contexts/LoaderContext";
 import Head from "next/head";
@@ -39,6 +41,8 @@ export default function RootLayout({
       </Head>
 
       <body className={fredoka.className} suppressHydrationWarning>
+        <SpeedInsights />
+        <Analytics />
         <ThemeProvider
           attribute="class"
           defaultTheme="light"
