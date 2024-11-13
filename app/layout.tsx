@@ -6,6 +6,7 @@ import { ThemeProvider } from "@/components/theme-provider";
 import Footer from "./Home/Footer";
 
 import { LoaderProvider } from "./contexts/LoaderContext";
+import Head from "next/head";
 
 const fredoka = Fredoka({
   subsets: ["latin"],
@@ -24,7 +25,15 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <Head>
+        <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin="anonymous"
+        />
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      </Head>
 
       <body className={fredoka.className} suppressHydrationWarning>
         <ThemeProvider

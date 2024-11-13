@@ -8,6 +8,16 @@ body {
   font-family: 'Fredoka', sans-serif;
 }
 
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#__next {
+  flex-grow: 1;
+}
  
      
 
