@@ -7,7 +7,6 @@ import Footer from "./Home/Footer";
 
 import { LoaderProvider } from "./contexts/LoaderContext";
 import Head from "next/head";
-import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const fredoka = Fredoka({
   subsets: ["latin"],
@@ -37,8 +36,6 @@ export default function RootLayout({
       </Head>
 
       <body className={fredoka.className} suppressHydrationWarning>
-        <SpeedInsights />
-
         <ThemeProvider
           attribute="class"
           defaultTheme="light"
