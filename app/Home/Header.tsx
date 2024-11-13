@@ -127,7 +127,10 @@ export const CallButton: React.FC<CallButton> = ({ SITE_DATA }) => {
       className="bg-white hover:bg-slate-100 h-[38px] w-[38px] p-0"
       onClick={() => (window.location.href = `tel:${SITE_DATA.call.number}`)}
     >
-      <Phone className="text-black h-[1.2rem] w-[1.2rem]  rotate-0  transition-all dark:-rotate-90  "></Phone>
+      <Phone
+        className="text-black h-[1.2rem] w-[1.2rem]  rotate-0  transition-all dark:-rotate-90  "
+        aria-label="Call us"
+      ></Phone>
     </Button>
   );
 };
