@@ -30,7 +30,7 @@ export default Programs;
 
 const ProgramTitleAndDesc: React.FC<ProgramData> = ({ SITE_DATA }) => {
   return (
-    <div className="flex-col text-center justify-center">
+    <div className="flex-col text-center justify-center z-10">
       <h2 className="lg:text-[45px] text-[30px] font-semibold">
         {SITE_DATA.programs.title}
       </h2>
