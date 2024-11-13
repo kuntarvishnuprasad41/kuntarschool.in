@@ -77,6 +77,25 @@
         "button": { "title": "buttontitle", "url": "buttonurl" },
         "color": "bg-teal-500 text-black"
       }
-    ]
+    ],
+    "programsDescriptive": {
+      "image": "imageUrl",
+      "title": "title",
+      "description": "description",
+      "container": [
+        { "title": "title", "description": "description" },
+        { "title": "title", "description": "description" },
+        { "title": "title", "description": "description" }
+      ],
+      "keypoints": ["point", "point"],
+      "button": {
+        "title": "View more",
+        "url": "url"
+      },
+      "video-btn": {
+        "title": "Title",
+        "url": "url"
+      }
+    }
   }
 }

@@ -9,16 +9,20 @@ export function middleware(request: NextRequest) {
   // Check if there is any supported locale in the pathname
   const { pathname } = request.nextUrl;
 
-  // Skip public assets and API paths
-  if (
-    pathname.startsWith("/_next") ||
-    pathname.startsWith("/static") ||
-    pathname.startsWith("/public") ||
-    pathname.startsWith("/favicon.ico") ||
-    pathname.match(/\.(png|jpg|jpeg|gif|svg|webp|ico|css|js)$/)
-  ) {
-    return NextResponse.next();
-  }
+    if (pathname == "/soon") {
+      return;
+    }
+    if (
+      pathname.startsWith("/_next") ||
+      pathname.startsWith("/static") ||
+      pathname.startsWith("/public") ||
+      pathname.startsWith("/favicon.ico") ||
+      pathname.startsWith("soon") ||
+      pathname.match(/\.(png|jpg|jpeg|gif|svg|webp|ico|css|js)$/)
+    ) {
+      // Skip public assets and API paths
+      return NextResponse.next();
+    }
   const pathnameHasLocale = locales.some(
     (locale) => pathname.startsWith(`/${locale}/`) || pathname === `/${locale}`
   );

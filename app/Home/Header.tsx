@@ -60,7 +60,7 @@ export const Header: React.FC<HeaderProps> = ({ SITE_DATA }) => {
 
   return (
     <header
-      className="w-full h-[100px] flex justify-between items-center fixed  dark:bg-[#040718] px-4 z-10"
+      className="w-full h-[55px] flex justify-between items-center fixed  dark:bg-[#040718] px-4 z-10"
       style={
         theme === "dark"
           ? {
@@ -69,13 +69,13 @@ export const Header: React.FC<HeaderProps> = ({ SITE_DATA }) => {
           : { background: `linear-gradient(250deg, #D1F2F0 40%, #FEF8EC 80%)` }
       }
     >
-      <div className="relative h-full aspect-[2/1]">
+      <div className="relative h-[140%] aspect-[2/1]">
         <Image
           src={"/logo.svg"}
           alt={"A.U.P.S. KUNTAR"}
           width={400}
           height={400}
-          className="-mt-8"
+          className="-mt-4"
           priority
           loading="eager"
         />
