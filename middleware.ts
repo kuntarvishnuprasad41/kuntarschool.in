@@ -36,7 +36,7 @@ export function middleware(request: NextRequest) {
   // e.g. incoming request is /products
   // The new URL is now /en-US/products
   // Comment to stop coming soon
-  // request.nextUrl.pathname = `/soon`;
+  request.nextUrl.pathname = `/soon`;
   return NextResponse.redirect(request.nextUrl);
 }
 export const config = {
