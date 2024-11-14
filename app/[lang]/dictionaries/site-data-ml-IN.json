@@ -34,24 +34,151 @@
   "programs": {
     "title": "Our Programs",
     "description": "Programs we offer",
-    "programs": [
-      {
-        "title": "Sports",
-        "subtitle": "Sub description",
+    "programs": {
+      "title": "Our Programs",
+      "description": "Programs we offer",
+      "programs": [
+        {
+          "title": "Sports",
+          "subtitle": "Sub description",
+          "image": "imageUrl",
+          "button": { "title": "buttontitle", "url": "buttonurl" },
+          "color": "bg-orange-50 border-orange-100"
+        },
+        {
+          "title": "Music",
+          "subtitle": "Sub description",
+          "image": "imageUrl",
+          "button": { "title": "buttontitle", "url": "buttonurl" },
+          "color": "bg-teal-500 text-black"
+        },
+        {
+          "title": "Drawing",
+          "subtitle": "Sub description",
+          "image": "imageUrl",
+          "button": { "title": "buttontitle", "url": "buttonurl" },
+          "color": "bg-orange-50 border-orange-100"
+        },
+        {
+          "title": "Music",
+          "subtitle": "Sub description",
+          "image": "imageUrl",
+          "button": { "title": "buttontitle", "url": "buttonurl" },
+          "color": "bg-teal-500 text-black"
+        },
+        {
+          "title": "Music",
+          "subtitle": "Sub description",
+          "image": "imageUrl",
+          "button": { "title": "buttontitle", "url": "buttonurl" },
+          "color": "bg-orange-50 text-black"
+        },
+        {
+          "title": "Music",
+          "subtitle": "Sub description",
+          "image": "imageUrl",
+          "button": { "title": "buttontitle", "url": "buttonurl" },
+          "color": "bg-teal-500 text-black"
+        }
+      ],
+      "programsDescriptive": {
         "image": "imageUrl",
-        "button": { "title": "buttontitle", "url": "buttonurl" }
+        "title": "title",
+        "description": "description description description descriptiondescription descriptiondescriptiondescription description descriptiondescription descriptiondescriptiondescription",
+        "container": [
+          { "title": "title", "description": "description" },
+          { "title": "title", "description": "description" },
+          { "title": "title", "description": "description" }
+        ],
+        "keypoints": ["point", "point"],
+        "button": {
+          "title": "View more",
+          "url": "url"
+        },
+        "vidB": {
+          "title": "Title",
+          "url": "url"
+        }
+      }
+    },
+    "parallaxBlogs": [
+      {
+        "title": "",
+        "link": "https://google.com",
+        "thumbnail": "/logo.svg"
       },
       {
-        "title": "Sports",
-        "subtitle": "Sub description",
-        "image": "imageUrl",
-        "button": { "title": "buttontitle", "url": "buttonurl" }
+        "title": "",
+        "link": "",
+        "thumbnail": "/logo.svg"
       },
       {
-        "title": "Sports",
-        "subtitle": "Sub description",
-        "image": "imageUrl",
-        "button": { "title": "buttontitle", "url": "buttonurl" }
+        "title": "",
+        "link": "https://google.com",
+        "thumbnail": "/logo.svg"
+      },
+
+      {
+        "title": "",
+        "link": "https://google.com",
+        "thumbnail": "/logo.svg"
+      },
+      {
+        "title": "",
+        "link": "https://google.com",
+        "thumbnail": "/logo.svg"
+      },
+      {
+        "title": "",
+        "link": "",
+        "thumbnail": "/logo.svg"
+      },
+
+      {
+        "title": "",
+        "link": "",
+        "thumbnail": "/logo.svg"
+      },
+      {
+        "title": "",
+        "link": "",
+        "thumbnail": "/logo.svg"
+      },
+      {
+        "title": "",
+        "link": "",
+        "thumbnail": "/logo.svg"
+      },
+      {
+        "title": "",
+        "link": "",
+        "thumbnail": "/logo.svg"
+      },
+      {
+        "title": "",
+        "link": "",
+        "thumbnail": "/logo.svg"
+      },
+
+      {
+        "title": "",
+        "link": "",
+        "thumbnail": "/logo.svg"
+      },
+      {
+        "title": "",
+        "link": "",
+        "thumbnail": "/logo.svg"
+      },
+      {
+        "title": "",
+        "link": "",
+        "thumbnail": "/logo.svg"
+      },
+      {
+        "title": "",
+        "link": "",
+        "thumbnail": "/logo.svg"
       }
     ]
   }

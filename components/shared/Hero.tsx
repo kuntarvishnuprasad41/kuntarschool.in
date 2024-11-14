@@ -29,14 +29,14 @@ export const Hero: React.FC<HeaderProps> = ({ SITE_DATA }) => {
                 loading="eager"
               />
             </div>
-            <p className="lg:text-[56px] text-[32px] text-black font-semibold min-h-[70px]">
+            <p className="lg:text-[56px] text-[32px] text-black dark:text-white font-semibold min-h-[70px]">
               {" "}
               {/* Set min-height for stability */}
               {SITE_DATA.hero.text}
             </p>
           </div>
 
-          <p className="lg:text-[26px] text-[16px] text-black font-semibold min-h-[30px]">
+          <p className="lg:text-[26px] text-[16px] text-black dark:text-white font-semibold min-h-[30px]">
             {" "}
             {/* Set min-height */}
             {SITE_DATA.hero.context}

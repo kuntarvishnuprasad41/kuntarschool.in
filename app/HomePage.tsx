@@ -1,3 +1,5 @@
+"use client";
+
 /**
  * v0 by Vercel.
  * @see https://v0.dev/t/sD0MFeiBVTx
@@ -13,11 +15,13 @@ import { HeaderProps } from "./Home/Header";
 import dynamic from "next/dynamic";
 import { ProgramSection } from "@/components/shared/Programs";
 import { HeroParallax } from "@/components/ui/hero-parallax";
+import { useTheme } from "next-themes";
 const Hero = dynamic(() => import("@/components/shared/Hero"));
 
 const Programs = dynamic(() => import("@/components/shared/Programs"));
 
 export const HomePage: React.FC<HeaderProps> = ({ SITE_DATA }) => {
+  const { theme } = useTheme();
   return (
     <div className="relative w-full overflow-hidden">
       <SparklesCore
@@ -32,16 +36,27 @@ export const HomePage: React.FC<HeaderProps> = ({ SITE_DATA }) => {
       <CurlyDevider />
       <HomeContainer>
         <Hero SITE_DATA={SITE_DATA} />
-        <EqualSpacing />
+        {Array.from({ length: 5 }).map((k, idx) => {
+          return <EqualSpacing key={idx} />;
+        })}
+      </HomeContainer>
+      <HeroParallax products={SITE_DATA.parallaxBlogs} />
+      <HomeContainer>
         <Programs SITE_DATA={SITE_DATA} />
         <EqualSpacing />
         <EqualSpacing />
       </HomeContainer>
       <div
         className="bg-secondary_orange_light"
-        style={{
-          background: `linear-gradient(50deg, #D1F2F0 40%, #FEF8EC 70%)`,
-        }}
+        style={
+          theme === "dark"
+            ? {
+                background: `linear-gradient(250deg, #023047 100%, #219ebc 40%)`,
+              }
+            : {
+                background: `linear-gradient(250deg, #D1F2F0 40%, #FEF8EC 70%)`,
+              }
+        }
       >
         <HomeContainer>
           <div>
@@ -54,12 +69,11 @@ export const HomePage: React.FC<HeaderProps> = ({ SITE_DATA }) => {
           </div>
         </HomeContainer>
       </div>
-      {/* <HeroParallax products={products} /> */}
     </div>
   );
 };
 
-// export const 
+// export const
 
 const CurlyDevider = () => {
   return (

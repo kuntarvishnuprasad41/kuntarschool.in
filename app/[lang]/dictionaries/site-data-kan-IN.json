@@ -39,21 +39,64 @@
         "title": "Sports",
         "subtitle": "Sub description",
         "image": "imageUrl",
-        "button": { "title": "buttontitle", "url": "buttonurl" }
+        "button": { "title": "buttontitle", "url": "buttonurl" },
+        "color": "bg-orange-50 border-orange-100"
       },
       {
-        "title": "Sports",
+        "title": "Music",
         "subtitle": "Sub description",
         "image": "imageUrl",
-        "button": { "title": "buttontitle", "url": "buttonurl" }
+        "button": { "title": "buttontitle", "url": "buttonurl" },
+        "color": "bg-teal-500 text-black"
       },
       {
-        "title": "Sports",
+        "title": "Drawing",
         "subtitle": "Sub description",
         "image": "imageUrl",
-        "button": { "title": "buttontitle", "url": "buttonurl" }
+        "button": { "title": "buttontitle", "url": "buttonurl" },
+        "color": "bg-orange-50 border-orange-100"
+      },
+      {
+        "title": "Music",
+        "subtitle": "Sub description",
+        "image": "imageUrl",
+        "button": { "title": "buttontitle", "url": "buttonurl" },
+        "color": "bg-teal-500 text-black"
+      },
+      {
+        "title": "Music",
+        "subtitle": "Sub description",
+        "image": "imageUrl",
+        "button": { "title": "buttontitle", "url": "buttonurl" },
+        "color": "bg-orange-50 text-black"
+      },
+      {
+        "title": "Music",
+        "subtitle": "Sub description",
+        "image": "imageUrl",
+        "button": { "title": "buttontitle", "url": "buttonurl" },
+        "color": "bg-teal-500 text-black"
       }
-    ]
+    ],
+    "programsDescriptive": {
+      "image": "imageUrl",
+      "title": "title",
+      "description": "description description description descriptiondescription descriptiondescriptiondescription description descriptiondescription descriptiondescriptiondescription",
+      "container": [
+        { "title": "title", "description": "description" },
+        { "title": "title", "description": "description" },
+        { "title": "title", "description": "description" }
+      ],
+      "keypoints": ["point", "point"],
+      "button": {
+        "title": "View more",
+        "url": "url"
+      },
+      "vidB": {
+        "title": "Title",
+        "url": "url"
+      }
+    }
   },
   "parallaxBlogs": [
     {
