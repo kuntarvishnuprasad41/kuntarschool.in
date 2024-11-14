@@ -54,5 +54,85 @@
         "button": { "title": "buttontitle", "url": "buttonurl" }
       }
     ]
-  }
+  },
+  "parallaxBlogs": [
+    {
+      "title": "",
+      "link": "https://google.com",
+      "thumbnail": "/logo.svg"
+    },
+    {
+      "title": "",
+      "link": "",
+      "thumbnail": "/logo.svg"
+    },
+    {
+      "title": "",
+      "link": "https://google.com",
+      "thumbnail": "/logo.svg"
+    },
+
+    {
+      "title": "",
+      "link": "https://google.com",
+      "thumbnail": "/logo.svg"
+    },
+    {
+      "title": "",
+      "link": "https://google.com",
+      "thumbnail": "/logo.svg"
+    },
+    {
+      "title": "",
+      "link": "",
+      "thumbnail": "/logo.svg"
+    },
+
+    {
+      "title": "",
+      "link": "",
+      "thumbnail": "/logo.svg"
+    },
+    {
+      "title": "",
+      "link": "",
+      "thumbnail": "/logo.svg"
+    },
+    {
+      "title": "",
+      "link": "",
+      "thumbnail": "/logo.svg"
+    },
+    {
+      "title": "",
+      "link": "",
+      "thumbnail": "/logo.svg"
+    },
+    {
+      "title": "",
+      "link": "",
+      "thumbnail": "/logo.svg"
+    },
+
+    {
+      "title": "",
+      "link": "",
+      "thumbnail": "/logo.svg"
+    },
+    {
+      "title": "",
+      "link": "",
+      "thumbnail": "/logo.svg"
+    },
+    {
+      "title": "",
+      "link": "",
+      "thumbnail": "/logo.svg"
+    },
+    {
+      "title": "",
+      "link": "",
+      "thumbnail": "/logo.svg"
+    }
+  ]
 }

@@ -12,6 +12,7 @@ import { HeaderProps } from "./Home/Header";
 // import Programs from "@/components/shared/Programs";
 import dynamic from "next/dynamic";
 import { ProgramSection } from "@/components/shared/Programs";
+import { HeroParallax } from "@/components/ui/hero-parallax";
 const Hero = dynamic(() => import("@/components/shared/Hero"));
 
 const Programs = dynamic(() => import("@/components/shared/Programs"));
@@ -53,9 +54,12 @@ export const HomePage: React.FC<HeaderProps> = ({ SITE_DATA }) => {
           </div>
         </HomeContainer>
       </div>
+      {/* <HeroParallax products={products} /> */}
     </div>
   );
 };
+
+// export const 
 
 const CurlyDevider = () => {
   return (

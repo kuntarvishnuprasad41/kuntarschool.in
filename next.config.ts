@@ -5,6 +5,9 @@ const nextConfig: NextConfig = {
     // This will allow the build to continue even if there are TypeScript errors
     ignoreBuildErrors: true,
   },
+  images: {
+    domains: ["aceternity.com"],
+  },
   /* config options here */
 };
 

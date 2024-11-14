@@ -24,6 +24,13 @@ export type Sitedata = {
     context: string;
   };
   programs: Programs;
+  parallaxBlogs: ParallaxProds[];
+};
+
+export type ParallaxProds = {
+  title: string;
+  link: string;
+  thumbnail: string;
 };
 
 export type ProgramContainer = { title: string; description: string };
