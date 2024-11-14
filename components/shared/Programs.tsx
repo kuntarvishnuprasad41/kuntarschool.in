@@ -118,8 +118,8 @@ export const ProgramSection: React.FC<ProgramData> = ({ SITE_DATA }) => {
           {SITE_DATA.programs.programsDescriptive.container.map(
             (content, idx) => {
               return (
-                <div className="flex lg:flex-row flex-col gap-10">
-                  <div key={idx}>
+                <div className="flex lg:flex-row flex-col gap-10" key={idx}>
+                  <div >
                     <h2 className="font-medium text-xl">{content.title}</h2>
                     <p>{content.description}</p>
                   </div>
@@ -136,11 +136,11 @@ export const ProgramSection: React.FC<ProgramData> = ({ SITE_DATA }) => {
             }
           )}
         </div>
-        <div className="justify-start mt-4">
+        <div className="justify-center items-center content-center   mt-4 flex flex-col ">
           {SITE_DATA.programs.programsDescriptive.keypoints.map((kp, idx) => {
             return (
               <div
-                className="flex justify-start gap-2 w-[450px] text-center items-center "
+                className="flex justify-center gap-2 w-[450px] text-center items-center "
                 key={idx}
               >
                 <div className="h-2 w-2 bg-teal-600 rounded-full "> </div>
