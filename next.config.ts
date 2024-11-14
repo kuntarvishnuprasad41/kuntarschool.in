@@ -6,7 +6,7 @@ const nextConfig: NextConfig = {
     ignoreBuildErrors: true,
   },
   images: {
-    domains: ["aceternity.com"],
+    domains: ["scontent.fccj3-1.fna.fbcdn.net"],
   },
   /* config options here */
 };
