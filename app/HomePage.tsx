@@ -65,7 +65,7 @@ const CurlyDevider = () => {
         height={200}
         width={200}
         alt="Curved Divider"
-        className=" mt-32 w-full  "
+        className=" mt-28 w-full  "
         priority
       />
     </div>

@@ -5,7 +5,7 @@ import React from "react";
 export const Hero: React.FC<HeaderProps> = ({ SITE_DATA }) => {
   return (
     <div>
-      <div className="relative z-1 w-full flex   justify-between gap-2 mt-24 min-h-[300px]">
+      <div className="relative z-1 w-full flex   justify-between gap-2 mt-4 lg:mt-20 min-h-[300px]">
         {/* Adjusted min-height */}
         <div className="flex-col sm:w-full justify-center items-center">
           <div>
