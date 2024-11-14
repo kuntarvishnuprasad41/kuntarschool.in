@@ -177,5 +177,27 @@
       "link": "",
       "thumbnail": "/logo.svg"
     }
-  ]
+  ],
+  "story": {
+    "story1": {
+      "image": "ppl.jpg",
+      "title": "title",
+      "description": "description description description description description description description description description description description descriptiondescriptionv description description description",
+      "points": [
+        "point1 description description description",
+        "point2 description description description description",
+        "point3 description description v description"
+      ]
+    },
+    "story2": {
+      "image": "ppl.jpg",
+      "title": "title",
+      "description": "description   description description description description description description description description description description description ",
+      "points": [
+        "point1 description description description description description description ",
+        "point2 description description description description",
+        "point3 description description description description"
+      ]
+    }
+  }
 }

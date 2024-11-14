@@ -16,6 +16,7 @@ import dynamic from "next/dynamic";
 import { ProgramSection } from "@/components/shared/Programs";
 import { HeroParallax } from "@/components/ui/hero-parallax";
 import { useTheme } from "next-themes";
+import TheStory from "@/components/shared/TheStory";
 const Hero = dynamic(() => import("@/components/shared/Hero"));
 
 const Programs = dynamic(() => import("@/components/shared/Programs"));
@@ -41,6 +42,26 @@ export const HomePage: React.FC<HeaderProps> = ({ SITE_DATA }) => {
         })}
       </HomeContainer>
       <HeroParallax products={SITE_DATA.parallaxBlogs} />
+      <div
+        className="bg-secondary_orange_light"
+        style={
+          theme === "dark"
+            ? {
+                background: `linear-gradient(250deg, #023047 100%, #219ebc 40%)`,
+              }
+            : {
+                background: `linear-gradient(250deg, #D1F2F0 40%, #FEF8EC 70%)`,
+              }
+        }
+      >
+        <div>
+          <EqualSpacing />
+          <EqualSpacing />
+          <TheStory SITE_DATA={SITE_DATA} />
+          <EqualSpacing />
+          <EqualSpacing />
+        </div>
+      </div>
       <HomeContainer>
         <Programs SITE_DATA={SITE_DATA} />
         <EqualSpacing />

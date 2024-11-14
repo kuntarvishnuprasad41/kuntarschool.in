@@ -25,6 +25,20 @@ export type Sitedata = {
   };
   programs: Programs;
   parallaxBlogs: ParallaxProds[];
+  story: {
+    story1: {
+      image: string;
+      title: string;
+      description: string;
+      points: string[];
+    };
+    story2: {
+      image: string;
+      title: string;
+      description: string;
+      points: string[];
+    };
+  };
 };
 
 export type ParallaxProds = {
